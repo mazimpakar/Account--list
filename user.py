@@ -20,5 +20,16 @@ class Account:
         self.account_name = account_name
         self.user_name = user_name
         self.password= password
-        
 
+
+
+    account_list = [] # Empty account list
+ # Init method up here
+    def save_account(self):
+
+        '''
+        save_account method saves account objects into account_list
+        '''
+
+        Account.account_list.append(self)   
+    
