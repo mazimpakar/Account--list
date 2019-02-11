@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-from user import Account # Importing the account class
+from user import Account # Importing the Account class
 
 class TestAccount(unittest.TestCase):
 
@@ -28,8 +28,7 @@ class TestAccount(unittest.TestCase):
         
 
 
-if __name__ == '__main__':
-    unittest.main()
+
 
     def test_save_account(self):
         '''
@@ -39,5 +38,33 @@ if __name__ == '__main__':
         self.new_account.save_account() # saving the new account
         self.assertEqual(len(Account.account_list),1)
 
-if __name__ ==  '__main__':
-    unittest.main()  
+    def test_save_multiple_account(self):
+            '''
+            test_save_multiple_account to check if we can save multiple account
+            objects to our account_list
+            '''
+            self.new_account.save_account()
+            test_account = Account("Marie","doudou","0788267443","rose@user.com") # new account
+            test_account.save_account()
+            self.assertEqual(len(Account.account_list),2)
+
+# setup and class creation up here
+    def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            Account.account_list = []
+
+# other test cases here
+    def test_save_multiple_account(self):
+            '''
+            test_save_multiple_account to check if we can save multiple account
+            objects to our account_list
+            '''
+            self.new_account.save_account()
+            test_account = Account("Aline","tete","0788267443","rose@user.com") # new account
+            test_account.save_account()
+            self.assertEqual(len(Account.account_list),2)
+
+if __name__ == '__main__':
+    unittest.main()
