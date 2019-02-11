@@ -44,7 +44,7 @@ class TestAccount(unittest.TestCase):
             objects to our account_list
             '''
             self.new_account.save_account()
-            test_account = Account("Marie","doudou","0788267443","rose@user.com") # new account
+            test_account = Account("facebook","doudou","0788267443ro") # new account
             test_account.save_account()
             self.assertEqual(len(Account.account_list),2)
 
@@ -62,9 +62,41 @@ class TestAccount(unittest.TestCase):
             objects to our account_list
             '''
             self.new_account.save_account()
-            test_account = Account("Aline","tete","0788267443","rose@user.com") # new account
+            test_account = Account("facebook","tete","0788267443te") # new account
             test_account.save_account()
             self.assertEqual(len(Account.account_list),2)
+
+# More tests above
+    def test_delete_account(self):
+            '''
+            test_delete_account to test if we can remove a account from our account list
+            '''
+            self.new_account.save_account()
+            test_account = Account("facebook","doudou","0788267443ro") # new account
+            test_account.save_account()
+
+            self.new_account.delete_account()# Deleting a account object
+            self.assertEqual(len(Account.account_list),1)
+ # More tests above
+    def test_delete_account(self):
+            '''
+            test_delete_account to test if we can remove a account from our account list
+            '''
+            self.new_account.save_account()
+            test_account = Account("facebook","doudou","0788267443ro") # new account
+            test_account.save_account()
+
+            self.new_account.delete_account()# Deleting a account object
+            self.assertEqual(len(Account.account_list),1)
+    def delete_account(self):
+
+        '''
+        delete_account method deletes a saved account from the account_list
+        '''
+
+        Account.account_list.remove(self)
+
+
 
 if __name__ == '__main__':
     unittest.main()
