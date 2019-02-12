@@ -86,7 +86,7 @@ class TestAccount(unittest.TestCase):
             test_account = Account("facebook","doudou","0788267443ro") # new account
             test_account.save_account()
 
-            self.new_account.delete_account()# Deleting a account object
+            self.new_account.delete_Account()# Deleting a account object
             self.assertEqual(len(Account.account_list),1)
     def delete_account(self):
 
