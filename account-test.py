@@ -1,21 +1,22 @@
-import unittest # Importing the unittest module
-from user import Account # Importing the Account class
+import unittest 
+from Account import account
 
 class TestAccount(unittest.TestCase):
 
     '''
-    Test class that defines test cases for the account  class behaviours.
+    Test class that defines test cases for the contact class behaviours.
 
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
-        '''
+    '''
+   # Items up here .......
 
     def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_account = Account("facebook","mazimpaka","0786950337ro") # create account object
-        ''
+        self.new_account = account("facebook","Mazimpak","0786950337","rose@gmail.com") # create contact object
+
 
     def test_init(self):
         '''
@@ -23,111 +24,94 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.assertEqual(self.new_account.account_name,"facebook")
-        self.assertEqual(self.new_account.user_name,"mazimpaka")
-        self.assertEqual(self.new_account.password,"0786950337ro")
-        
+        self.assertEqual(self.new_account.last_name,"Mazimpak")
+        self.assertEqual(self.new_account.phone_number,"0786950337")
+        self.assertEqual(self.new_account.email,"rose@gmail.com")
 
 
 
-
+   
     def test_save_account(self):
         '''
-        test_save_account test case to test if the account object is saved into
-         the account list
+        test_save_contact test case to test if the contact object is saved into
+            the contact list
         '''
-        self.new_account.save_account() # saving the new account
-        self.assertEqual(len(Account.account_list),1)
+        self.new_account.save_account() # saving the new contact
+        self.assertEqual(len(account.account_list),1)
+
+# Items up here...
 
     def test_save_multiple_account(self):
             '''
-            test_save_multiple_account to check if we can save multiple account
-            objects to our account_list
+            test_save_multiple_contact to check if we can save multiple contact
+            objects to our contact_list
             '''
             self.new_account.save_account()
-            test_account = Account("facebook","doudou","0788267443ro") # new account
+            test_account = account("facebook","rose","0788267443","roro@user.com") # new contact
             test_account.save_account()
-            self.assertEqual(len(Account.account_list),2)
+            self.assertEqual(len(account.account_list),2)
 
 # setup and class creation up here
     def tearDown(self):
             '''
             tearDown method that does clean up after each test case has run.
             '''
-            Account.account_list = []
+            account.account_list = []
 
 # other test cases here
     def test_save_multiple_account(self):
             '''
-            test_save_multiple_account to check if we can save multiple account
-            objects to our account_list
+            test_save_multiple_contact to check if we can save multiple contact
+            objects to our contact_list
             '''
             self.new_account.save_account()
-            test_account = Account("facebook","tete","0788267443te") # new account
-            test_account.save_account()
-            self.assertEqual(len(Account.account_list),2)
+            test_account = account("facebook","rose","0788267443","roro@user.com") # new contact
+            test_account.save__account()
+            self.assertEqual(len(_account._account_list),2)
 
 # More tests above
-    def test_delete_account(self):
+    def test_delete__account(self):
             '''
-            test_delete_account to test if we can remove a account from our account list
+            test_delete_contact to test if we can remove a contact from our contact list
             '''
-            self.new_account.save_account()
-            test_account = Account("facebook","doudou","0788267443ro") # new account
-            test_account.save_account()
+            self.new__account.save__account()
+            test__account = _account("facebook","rose","0788267443","roro@user.com") # new contact
+            test__account.save__account()
 
-            self.new_account.delete_account()# Deleting a account object
-            self.assertEqual(len(Account.account_list),1)
- # More tests above
-    def test_delete_account(self):
-            '''
-            test_delete_account to test if we can remove a account from our account list
-            '''
-            self.new_account.save_account()
-            test_account = Account("facebook","doudou","0788267443ro") # new account
-            test_account.save_account()
-
-            self.new_account.delete_account()# Deleting a account object
-            self.assertEqual(len(Account.account_list),1)
-    def delete_account(self):
-
+            self.new__account.delete__account()# Deleting a contact object
+            self.assertEqual(len(_account._account_list),1)
+    def test_find__account_by_number(self):
         '''
-        delete_account method deletes a saved account from the account_list
+        test to check if we can find a contact by phone number and display information
         '''
 
-        Account.account_list.remove(self)
+        self.new__account.save__account()
+        test__account = contact("facebook","rose","0788267443","roro@user.com") # new contact
+        test__account.save__account()
 
+        found__account= _account.find_by_number("0788267443")
 
-    def test_find_account_by_user(self):
+        self.assertEqual(found__account.email,test__account.email) 
+    def test_contact_exists(self):
         '''
-        test to check if we can find a account by user name and display information
+        test to check if we can return a Boolean  if we cannot find the contact.
         '''
 
-        self.new_account.save_account()
-        test_account = Account("facebook","doudou","0788267443ro") # new account
-        test_accountt.save_account()
+        self.new__account.save__account()
+        test__account= _account("facebook","rose","0788267443","roro@user.com") # new contact
+        test__account.save__account()
 
-        found_account = Account.find_by_user("doudou")
+        _account_exists = _account._account_exist("0788267443")
 
-        self.assertEqual(found_account.password,test_account.password)
+        self.assertTrue(_account_exists)
+    def test_display_all__account(self):
+        '''
+        method that returns a list of all contacts saved
+        '''
 
+        self.assertEqual(_account.display__account(),_account._account_list)
 
-
-
-        
-
-    # def test_account_exists(self):
-    #     '''
-    #     test to check if we can return a Boolean  if we cannot find the account.
-    #     '''
-
-    #     self.new_account.save_account()
-    #     test_account = Account("facebook","doudodu","0788267443ro") # new account
-    #     test_account.save_account()
-
-    #     account_exists = Account.account_exist("doudou")
-
-    #     self.assertTrue(account_exists)   
-
-    
+   
 if __name__ == '__main__':
     unittest.main()
+    
