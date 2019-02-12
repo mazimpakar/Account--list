@@ -86,7 +86,7 @@ class TestAccount(unittest.TestCase):
             test_account = Account("facebook","doudou","0788267443ro") # new account
             test_account.save_account()
 
-            self.new_account.delete_Account()# Deleting a account object
+            self.new_account.delete_account()# Deleting a account object
             self.assertEqual(len(Account.account_list),1)
     def delete_account(self):
 
@@ -97,6 +97,37 @@ class TestAccount(unittest.TestCase):
         Account.account_list.remove(self)
 
 
+    def test_find_account_by_user(self):
+        '''
+        test to check if we can find a account by user name and display information
+        '''
 
+        self.new_account.save_account()
+        test_account = Account("facebook","doudou","0788267443ro") # new account
+        test_accountt.save_account()
+
+        found_account = Account.find_by_user("doudou")
+
+        self.assertEqual(found_account.password,test_account.password)
+
+
+
+
+        
+
+    # def test_account_exists(self):
+    #     '''
+    #     test to check if we can return a Boolean  if we cannot find the account.
+    #     '''
+
+    #     self.new_account.save_account()
+    #     test_account = Account("facebook","doudodu","0788267443ro") # new account
+    #     test_account.save_account()
+
+    #     account_exists = Account.account_exist("doudou")
+
+    #     self.assertTrue(account_exists)   
+
+    
 if __name__ == '__main__':
     unittest.main()
