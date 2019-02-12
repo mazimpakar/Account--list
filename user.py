@@ -1,9 +1,10 @@
-class _account:
+# import pyperclip
+class Account:
     """
     Class that generates new instances of contacts.
     """
 
-    _account_list = [] # Empty contact list
+    account_list = [] # Empty contact list
 
     def __init__(self,account_name,user_name,number,email):
 
@@ -13,7 +14,7 @@ class _account:
         self.user_name = user_name
         self.phone_number = number
         self.email = email
-    _account_list = [] # Empty contact list
+     # Empty contact list
  # Init method up here
     def save__account(self):
 
@@ -21,14 +22,14 @@ class _account:
         save_contact method saves contact objects into contact_list
         '''
 
-        _account._account_list.append(self)
+        Account.account_list.append(self)
     def delete__account(self):
 
         '''
         delete_contact method deletes a saved contact from the contact_list
         '''
 
-        account.account_list.remove(self)    
+        Account.account_list.remove(self)    
 
     @classmethod
     def display_accounts(cls):
@@ -70,3 +71,19 @@ class _account:
         method that returns the contact list
         '''
         return cls.account_list
+    # @classmethod
+    # def copy_email(cls,number):
+    #     account_found = cls.find_by_number(number)
+    #     print(account_found)
+    #     pyperclip.copy(account_found.email) 
+    def create_account(aname,uname,phone,email):
+        '''
+        Function to create a new contact
+        '''
+        new_account = Account(aname,uname,phone,email)
+        return new_account 
+    def save_accounts(account):
+    '''
+    Function to save contact
+    '''
+    account.save_account()
