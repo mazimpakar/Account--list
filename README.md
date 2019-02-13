@@ -38,6 +38,10 @@ e-mail:rosemazimpaka2@gmail.com
 phone number :0786950337
 whtapp number :0786950337
 
+### Copyright
+
+copyright (c) 2019[Mazimpaka M.Rose]
+
 ### Licence
 
-- MIT License Copyright (c)2018 Mazimpaka M.Rose
+This software mazimpakar/Password Locker is licensed under the MIT License
