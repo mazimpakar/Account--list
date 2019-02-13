@@ -82,26 +82,27 @@ class TestCredentials(unittest.TestCase):
 
         self.new_Credentials.delete__Credentials()# Deleting a Credentials object
         self.assertEqual(len(Credentials.Credentials_list),1)
-    def test_find__account_by_number(self):
+    def test_find__Credentials_by_number(self):
         '''
-        test to check if we can find a contact by phone number and display information
-        '''
-
-        self.new_account.save__account()
-        test__account = Account("twitter","rose","0788267443","roro@user.com") # new contact
-        test__account.save__account()
-
-        found__account= Account.find_by_number("0788267443")
-
-        self.assertEqual(found__account.email,test__account.email) 
-    def test_contact_exists(self):
-        '''
-        test to check if we can return a Boolean  if we cannot find the contact.
+        test to check if we can find a Credentials by phone number and display information
         '''
 
-        self.new_account.save__account()
-        test__account= Account("twitter","rose","0788267443","roro@user.com") # new contact
-        test__account.save__account()
+        self.new_Credentials.save__Credentials()
+        test__Credentials = Credentials("instagram","mazimpak","0786950337","rose@gmail.com") # new Credentials
+        test__Credentials.save__Credentials()
+
+        found__Credentials= Credentials.find_by_number("0786950337")
+
+        self.assertEqual(found__Credentials.email,test__Credentials.email) 
+
+    def test_Credentials_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the Credentials.
+        '''
+
+        self.new_Credentials.save__Credentials()
+        test_Credentials= Credentials("instagram","mazimpak","0786950337","rose@gmail.com") # new Credentials
+        test__Credentials.save__Credentials()
 
         _account_exists = Account.account_exist("0788267443")
 
