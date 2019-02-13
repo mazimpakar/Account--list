@@ -104,15 +104,16 @@ class TestCredentials(unittest.TestCase):
         test_Credentials= Credentials("instagram","mazimpak","0786950337","rose@gmail.com") # new Credentials
         test__Credentials.save__Credentials()
 
-        _account_exists = Account.account_exist("0788267443")
+        Credentials_exists = Credentials. Credentials_exist("0786950337")
 
-        self.assertTrue(_account_exists)
-    def test_display_all__account(self):
+        self.assertTrue( Credentials_exists)
+
+    def test_display_all__ Credentials(self):
         '''
-        method that returns a list of all contacts saved
+        method that returns a list of all  Credentials saved
         '''
 
-        self.assertEqual(Account.display_accounts(),Account.account_list)
+        self.assertEqual( Credentials.display_ Credentials(), Credentials. Credentials_list)
    
 
     
