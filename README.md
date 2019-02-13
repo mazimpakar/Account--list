@@ -8,40 +8,35 @@ Mazimpaka M.Rose
 
 ## Description
 
-Application that will help us manage our passwords and even generate new passwords for us ,when a person have many account but he don't rembember all those passwords and even create new ones.
+Application Password Locker will help us to manage our passwords and even generate new passwords for us ,when a person have many account but he don't remember all those passwords and even create new ones.
 
-## Link to site
-
-https://mazimpakar.github.io/account-list/
-
-## BDD
-
-#### A website that allows the user to remember password , 13 february 2019
+#### An applicatin allows to the user remembering password , 13 february 2019
 
 #### By **Mazimpaka M.Rose**
 
-## Setup/Installation Requirements
+### BDD
 
-You would need the following to access the website:
+In this application,
 
-- Internet connectivity either wireless
-- A web browser(Chrome is most recommendable)
+User should create a password locker account with his details, a login username and password.
 
-## Technologies Used
+User should store existing account credentials.
 
-This page was made using:
-HTML
-CSS for styling
-JQuery
-Bootstrap
-JavaScript
-python
+User create new account credentials.
+
+User have the option of putting in a password that he want to use for the new credential account.
+
+User can delete a credentials account is no longer need.
+
+## Technologie Used
+
+Python
 
 ## Support and contact details
 
 e-mail:rosemazimpaka2@gmail.com
 phone number :0786950337
-whtapp number :078695033
+whtapp number :0786950337
 
 ### Licence
 
