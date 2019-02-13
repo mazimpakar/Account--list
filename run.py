@@ -15,13 +15,13 @@ def del_account(account):
     Function to delete a contact
     '''
     account.delete_account()   
- def find_account(number):
+def find_account(number):
     '''
     Function that finds a contact by number and returns the contact
     '''
     return Account.find_by_number(number)
 
-    def check_existing_accounts(number):
+def check_existing_accounts(number):
     '''
     Function that check if a contact exists with that number and return a Boolean
     '''
@@ -32,6 +32,58 @@ def del_account(account):
     Function that returns all the saved contacts
     '''
     return Account.display_accounts()
+    #......credentials....
+
+def create_Credentials(credentials_name,user_name,phone_number,email):
+        '''
+        Function to create a new Credentials
+        '''
+        new_Credentials= Credentials(credentials_name,user_name,phone-number,email)
+        return new_Credentials
+
+def save_Credentials(Credentials):
+        '''
+        Function to save Credentials
+        '''
+        Credentials.save_Credentials()
+
+def del_Credentials(Credentials):
+    '''
+    Function to delete a Credentials
+    '''
+    Credentials.delete_Credentials()      
+
+    
+
+def find_Credentials(Credentials_name):
+        '''
+        Function that finds a Credentials by Credentials_name and returns the Credentials
+        '''
+        return Credentials.find_by_Credentials_name(Credentials_name)
+
+def check_existing_Credentials(Credentials_name):
+        '''
+        Function that check if a Credentials exists with that Credentials_name and return a Boolean
+        '''
+        return Credentials.Credentials_exist(Credentials_name)
+
+def display_Credentials():
+        '''
+        Function that returns all the saved Credentials
+        '''
+        return Credentials.display_Credentials()
+
+
+
+
+    
+
+
+
+
+
+
+
 
 
 def main():
