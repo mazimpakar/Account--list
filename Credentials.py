@@ -68,14 +68,4 @@ class Credentials:
         return False
     
     
-    # def create_credentials(aname,uname,phone,email):
-    #     '''
-    #     Function to create a new credentials
-    #     '''
-    #     new_credentials = Credentials(aname,uname,phone,email)
-    #     return new_credentials 
-    # def save_credentials(credentials):
-    # '''
-    # Function to save credentials
-    # '''
-    # credentials.save_credentials()
+    
