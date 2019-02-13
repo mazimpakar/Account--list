@@ -43,45 +43,45 @@ class TestCredentials(unittest.TestCase):
 
 # Items up here...
 
-    def test_save_multiple_account(self):
+    def test_save_multiple_Credentials(self):
         '''
-        test_save_multiple_contact to check if we can save multiple contact
-        objects to our contact_list
+        test_save_multiple_Credentials to check if we can save multiple Credentials
+        objects to our Credentials_list
         '''
-        self.new_account.save__account()
-        test_account = Account("twitter","rose","0788267443","roro@user.com") # new contact
-        test_account.save__account()
-        self.assertEqual(len(Account.account_list),2)
+        self.new_Credentials.save__Credentials()
+        test_Credentials = Credentials("instagram","rose","0788267443","roro@user.com") # new Credentials
+        test_Credentials.save__Credentials()
+        self.assertEqual(len(Credentials.Credentials_list),2)
 
 # setup and class creation up here
     def tearDown(self):
         '''
         tearDown method that does clean up after each test case has run.
         '''
-        Account.account_list = []
+        Credentials.Credentials_list = []
 
 # other test cases here
-    def test_save_multiple_account(self):
+    def test_save_multiple_Credentials(self):
         '''
-        test_save_multiple_contact to check if we can save multiple contact
-        objects to our contact_list
+        test_save_multiple_Credentials to check if we can save multiple Credentials
+        objects to our Credentials_list
         '''
-        self.new_account.save__account()
-        test_account = Account("twitter","rose","0788267443","roro@user.com") # new contact
-        test_account.save__account()
-        self.assertEqual(len(Account.account_list),2)
+        self.new_Credentials.save__Credentials()
+        test_Credentials = Credentials("instagram","aline","0783691714","tete@user.com") # new Credentials
+        test_Credentials.save__Credentials()
+        self.assertEqual(len(Credentials.Credentials_list),2)
 
 # More tests above
-    def test_delete__account(self):
+    def test_delete__Credentials(self):
         '''
-        test_delete_contact to test if we can remove a contact from our contact list
+        test_delete_Credentials to test if we can remove a Credentials from our Credentialslist
         '''
-        self.new_account.save__account()
-        test__account = Account("twitter","rose","0788267443","roro@user.com") # new contact
-        test__account.save__account()
+        self.new_Credentials.save__Credentials()
+        test__Credentials = Credentials("instagram","rose","0788267443","roro@user.com") # new Credentials
+        test__Credentials.save__Credentials()
 
-        self.new_account.delete__account()# Deleting a contact object
-        self.assertEqual(len(Account.account_list),1)
+        self.new_Credentials.delete__Credentials()# Deleting a Credentials object
+        self.assertEqual(len(Credentials.Credentials_list),1)
     def test_find__account_by_number(self):
         '''
         test to check if we can find a contact by phone number and display information
