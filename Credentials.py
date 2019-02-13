@@ -36,6 +36,21 @@ class Credentials:
         method that returns the credentials_ list
         '''
         return cls.credentials_list
+@classmethod
+    def find_by_number(cls,number):
+        '''
+        Method that takes in a number and returns credentials that matches that number.
+
+        Args:
+            number: Phone number to search for
+        Returns :
+            credentials  of person that matches the number.
+        '''
+
+        for credentialsin cls.credentials_list:
+            if credentials.phone_number == number:
+                return credentials
+
     
     @classmethod
     def credentials_exist(cls,number):
@@ -53,14 +68,14 @@ class Credentials:
         return False
     
     
-    def create_credentials(aname,uname,phone,email):
-        '''
-        Function to create a new credentials
-        '''
-        new_credentials = Credentials(aname,uname,phone,email)
-        return new_credentials 
-    def save_credentials(credentials):
-    '''
-    Function to save credentials
-    '''
-    credentials.save_credentials()
+    # def create_credentials(aname,uname,phone,email):
+    #     '''
+    #     Function to create a new credentials
+    #     '''
+    #     new_credentials = Credentials(aname,uname,phone,email)
+    #     return new_credentials 
+    # def save_credentials(credentials):
+    # '''
+    # Function to save credentials
+    # '''
+    # credentials.save_credentials()
