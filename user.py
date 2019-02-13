@@ -36,7 +36,7 @@ class Account:
         '''
         method that returns the accountlist
         '''
-        return cls.account_lis
+        return cls.account_list
     @classmethod
     def find_by_number(cls,number):
         '''
@@ -65,25 +65,10 @@ class Account:
                     return True
 
         return False
-    @classmethod
-    def display_accounts(cls):
-        '''
-        method that returns the account  list
-        '''
-        return cls.account_list
-    # @classmethod
-    # def copy_email(cls,number):
-    #     account_found = cls.find_by_number(number)
-    #     print(account_found)
-    #     pyperclip.copy(account_found.email) 
-    def create_account(aname,uname,phone,email):
-        '''
-        Function to create a new account 
-        '''
-        new_account = Account(aname,uname,phone,email)
-        return new_account 
-    def save_accounts(account):
-    '''
-    Function to save account 
-    '''
-    account.save_account()
+    
+
+
+
+
+
+   
