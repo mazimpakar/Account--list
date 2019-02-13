@@ -95,10 +95,10 @@ def main():
                             print("-"*10)
 
                             print ("Acount name ....")
-                            f_name = input()
+                            a_name = input()
 
                             print("User name ...")
-                            l_name = input()
+                            u_name = input()
 
                             print("Phone number ...")
                             p_number = input()
@@ -107,7 +107,7 @@ def main():
                             e_address = input()
 
 
-                            save_accounts(create_account(a_name,u_name,p_number,e_address)) # create and save new contact.
+                            save_accounts(create_account(a_name,u_name,p_number,e_address)) # create and save new account.
                             print ('\n')
                             print(f"New Account {a_name} {u_name} created")
                             print ('\n')
