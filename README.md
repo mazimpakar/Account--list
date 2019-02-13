@@ -12,11 +12,11 @@ Application that will help us manage our passwords and even generate new passwor
 
 ## Link to site
 
-https://mazimpakar.github.io/Quiz-Board/
+https://mazimpakar.github.io/account-list/
 
 ## BDD
 
-#### A website that allows the user to answer the questions of JavaScript, 21 December 2018
+#### A website that allows the user to remember password , 13 february 2019
 
 #### By **Mazimpaka M.Rose**
 
