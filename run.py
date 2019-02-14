@@ -1,7 +1,7 @@
 
 # import pyperclip
-from Account import user
-from credentials import Credential
+from user import Account
+from Credentials import Credentials
 
 def create_account(aname,uname,phone,email):
         '''
@@ -32,7 +32,7 @@ def check_existing_accounts(number):
     '''
     return Account.account_exist(number)
 
-    def display_accounts():
+def display_accounts():
     '''
     Function that returns all the saved contacts
     '''
@@ -85,7 +85,7 @@ def main():
         print(' ')
         print("-"*100)
         print("Use these short codes : ca - create a new account, da - display accounts, fa -find a account, ex -exit the account list ")
-             short_code = input('Enter a choice: ').lower().strip()
+        short_code = input('Enter a choice: ').lower().strip()
         if short_code == 'ex':
             break
 
@@ -97,7 +97,7 @@ def main():
             user_name = input('Enter your user name - ').strip()
             phone_number= input('Enter your phone number - ').strip()
             email= input('Enter your email - ').strip()
-            create_user(account_name, user_name, phone_number,email)
+            Account(account_name, user_name, phone_number,email)
             print(" ")
             print(
                 f'New Account Created for: {account_name} {user_name} using phone-number: {phone_number}')
