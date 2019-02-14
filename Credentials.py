@@ -9,7 +9,7 @@ class Credentials:
 
       # docstring removed for simplicity
 
-        self.credential_name = credential_name
+        self.credential_name = credentials_name
         self.user_name = user_name
         self.phone_number = number
         self.email = email
@@ -36,7 +36,7 @@ class Credentials:
         method that returns the credentials_ list
         '''
         return cls.credentials_list
-@classmethod
+    @classmethod
     def find_by_number(cls,number):
         '''
         Method that takes in a number and returns credentials that matches that number.
@@ -47,7 +47,7 @@ class Credentials:
             credentials  of person that matches the number.
         '''
 
-        for credentialsin cls.credentials_list:
+        for credentials in cls.credentials_list:
             if credentials.phone_number == number:
                 return credentials
 
