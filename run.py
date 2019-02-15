@@ -101,7 +101,7 @@ def main():
             print(" ")
             print(
                 f'New Account Created for: {account_name} {user_name} using phone-number: {phone_number}')
-        elif short_code == 'li':
+        elif short_code == 'da':
             print("-"*100)
             print(' ')
             print('To create, enter your account details:')
